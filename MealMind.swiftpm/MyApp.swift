@@ -1,3 +1,4 @@
+import SwiftData
 import SwiftUI
 
 @main
@@ -6,5 +7,7 @@ struct MyApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: KitchenItem.self)
     }
 }
+

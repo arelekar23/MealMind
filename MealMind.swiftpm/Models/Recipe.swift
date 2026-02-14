@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Recipe
 struct Recipe: Identifiable, Codable, Hashable {
-    let id: String
+    let id: UUID
     let name: String
     let cuisine: String
     let category: MealCategory

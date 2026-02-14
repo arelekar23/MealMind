@@ -1,6 +1,6 @@
 [
   {
-    "id": "001",
+    "id": "A1B2C3D4-E5F6-7890-ABCD-EF1234567801",
     "name": "Rava Upma",
     "cuisine": "Maharashtrian",
     "category": "breakfast",
@@ -38,7 +38,7 @@
     "image": "upma"
   },
   {
-    "id": "002",
+    "id": "A1B2C3D4-E5F6-7890-ABCD-EF1234567802",
     "name": "Kanda Poha",
     "cuisine": "Maharashtrian",
     "category": "breakfast",
@@ -76,7 +76,7 @@
     "image": "poha"
   },
   {
-    "id": "003",
+    "id": "A1B2C3D4-E5F6-7890-ABCD-EF1234567803",
     "name": "Rajma",
     "cuisine": "North Indian",
     "category": "main meal",
@@ -117,7 +117,7 @@
     "image": "rajma"
   },
   {
-    "id": "004",
+    "id": "A1B2C3D4-E5F6-7890-ABCD-EF1234567804",
     "name": "Batata Kacharya",
     "cuisine": "Maharashtrian",
     "category": "main meal",
@@ -151,5 +151,56 @@
     ],
     "tips": "Cut the potatoes as thin as possible for maximum crispiness. Use a flat tava and don't overcrowd — fry in batches if needed.",
     "image": "batata_kacharya"
-  }
+  },
+  {
+      "id": "F1A2B3C4-D5E6-7890-ABCD-EF1234567805",
+      "name": "Rassa Gobi Aloo Matar",
+      "cuisine": "North Indian",
+      "category": "main meal",
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 40,
+      "servings": 4,
+      "calories": 380,
+      "tags": ["vegetarian", "budget", "dhaba-style", "meal-prep"],
+      "ingredients": [
+        { "name": "cauliflower", "quantity": 1, "unit": "medium", "category": "vegetable", "type": "countable" },
+        { "name": "potato", "quantity": 3, "unit": "medium", "category": "vegetable", "type": "countable" },
+        { "name": "green peas", "quantity": 0.5, "unit": "cup", "category": "vegetable", "type": "bulk" },
+        { "name": "onion", "quantity": 4, "unit": "medium", "category": "vegetable", "type": "countable" },
+        { "name": "tomato", "quantity": 2, "unit": "medium", "category": "vegetable", "type": "countable" },
+        { "name": "green chili", "quantity": 4, "unit": "piece", "category": "vegetable", "type": "countable" },
+        { "name": "ginger garlic paste", "quantity": 2, "unit": "tbsp", "category": "pantry", "type": "bulk" },
+        { "name": "ginger", "quantity": 1, "unit": "inch", "category": "vegetable", "type": "bulk" },
+        { "name": "curd", "quantity": 0.5, "unit": "cup", "category": "dairy", "type": "bulk" },
+        { "name": "mustard oil", "quantity": 2, "unit": "ladle", "category": "condiment", "type": "bulk" },
+        { "name": "cumin seeds", "quantity": 1, "unit": "tsp", "category": "spice", "type": "bulk" },
+        { "name": "cinnamon stick", "quantity": 1, "unit": "piece", "category": "spice", "type": "bulk" },
+        { "name": "black cardamom", "quantity": 1, "unit": "piece", "category": "spice", "type": "bulk" },
+        { "name": "bay leaves", "quantity": 2, "unit": "piece", "category": "spice", "type": "bulk" },
+        { "name": "turmeric", "quantity": 1, "unit": "tsp", "category": "spice", "type": "bulk" },
+        { "name": "coriander powder", "quantity": 1.5, "unit": "tbsp", "category": "spice", "type": "bulk" },
+        { "name": "cumin powder", "quantity": 1, "unit": "tsp", "category": "spice", "type": "bulk" },
+        { "name": "red chili powder", "quantity": 2, "unit": "tsp", "category": "spice", "type": "bulk" },
+        { "name": "black salt", "quantity": 0.5, "unit": "tsp", "category": "spice", "type": "bulk" },
+        { "name": "gram flour", "quantity": 1, "unit": "tbsp", "category": "pantry", "type": "bulk" },
+        { "name": "garam masala", "quantity": 1, "unit": "pinch", "category": "spice", "type": "bulk" },
+        { "name": "dry fenugreek powder", "quantity": 1, "unit": "pinch", "category": "spice", "type": "bulk" },
+        { "name": "salt", "quantity": 1, "unit": "tsp", "category": "pantry", "type": "bulk" },
+        { "name": "coriander leaves", "quantity": 3, "unit": "tbsp", "category": "herb", "type": "bulk" }
+      ],
+      "steps": [
+        "Wash cauliflower, cut into florets, and soak in salt water. Peel and cut 3 potatoes into similar-sized pieces.",
+        "Heat mustard oil in a pan until it smokes. Add cauliflower and potatoes, cook on high flame for 7-8 minutes until 90% done and light brown. Strain and set aside.",
+        "In the same oil, add cumin seeds, cinnamon stick, black cardamom, and bay leaves. Add chopped onions and fry until dark golden brown.",
+        "Add ginger garlic paste and 2 chopped green chilies. Stir fry until fragrant.",
+        "Lower flame. Add turmeric, coriander powder, cumin powder, red chili powder, black salt, and gram flour. Sprinkle hot water and fry until oil separates.",
+        "Add tomato puree and whisked curd. Mix well, add salt, cover and cook on medium flame for 8-10 minutes until masala is cooked and oil separates.",
+        "Add green peas, cover and cook for 5-7 minutes until peas are done.",
+        "Add hot water to adjust gravy consistency. Add the cooked cauliflower and potatoes. Stir well and cook for a few more minutes.",
+        "Add garam masala, dry fenugreek powder, sliced green chilies, ginger slices, and fresh coriander. Mix well and serve with roti, puri, or rice."
+      ],
+      "tips": "Use mustard oil for authentic dhaba flavor. Adding 1 tbsp gram flour to the masala gives the gravy a better texture and thickness. Always add hot water to avoid stopping the cooking process.",
+      "image": "rassa_gobi_aloo_matar"
+    }
 ]

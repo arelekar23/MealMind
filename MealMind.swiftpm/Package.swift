@@ -10,7 +10,7 @@ import AppleProductTypes
 let package = Package(
     name: "MealMind",
     platforms: [
-        .iOS("16.0")
+        .iOS("18.0")
     ],
     products: [
         .iOSApplication(
@@ -39,7 +39,11 @@ let package = Package(
             name: "AppModule",
             path: ".",
             resources: [
-                .process("Resources")
+                .process("Resources"),
+                .copy("IngredientCategoryClassifier.mlmodelc")
+            ],
+            swiftSettings: [
+                .define("SWIFT_PACKAGE")
             ]
         )
     ],

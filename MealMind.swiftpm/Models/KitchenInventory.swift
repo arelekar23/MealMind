@@ -6,34 +6,52 @@
 //
 
 import Foundation
+import SwiftData
 
-struct KitchenItem: Identifiable, Codable, Hashable {
-    let id: UUID
-    let name: String
-    let category: IngredientCategory
-    let type: IngredientType
+@Model
+class KitchenItem {
+    var id: UUID
+    var name: String
+    var categoryRaw: String
+    var typeRaw: String
     var count: Int
-    var stockLevel: StockLevel
+    var stockLevelRaw: String
+    
+    // MARK: - Enum Accessors
+    var category: IngredientCategory {
+        get { IngredientCategory(rawValue: categoryRaw) ?? .other }
+        set { categoryRaw = newValue.rawValue }
+    }
+    
+    var type: IngredientType {
+        get { IngredientType(rawValue: typeRaw) ?? .bulk }
+        set { typeRaw = newValue.rawValue }
+    }
+    
+    var stockLevel: StockLevel {
+        get { StockLevel(rawValue: stockLevelRaw) ?? .out }
+        set { stockLevelRaw = newValue.rawValue }
+    }
     
     var isAvailable: Bool {
-        switch type {
-        case .countable:
+        if type == .countable {
             return count > 0
-        case .bulk:
+        } else {
             return stockLevel != .out
         }
     }
+    
     init(name: String, category: IngredientCategory, type: IngredientType, count: Int = 0, stockLevel: StockLevel = .out) {
         self.id = UUID()
         self.name = name
-        self.category = category
-        self.type = type
+        self.categoryRaw = category.rawValue
+        self.typeRaw = type.rawValue
         self.count = count
-        self.stockLevel = stockLevel
+        self.stockLevelRaw = stockLevel.rawValue
     }
 }
 
-// MARK: - Stock Level (for bulk items like rice, oil, spices)
+// MARK: - Stock Level
 enum StockLevel: String, Codable, CaseIterable {
     case full = "full"
     case low = "low"

@@ -1,0 +1,60 @@
+[
+  {
+    "shortDescription" : "Classifies ingredient names into categories: vegetable, fruit, pantry, spice, herb, dairy, protein, condiment",
+    "metadataOutputVersion" : "3.0",
+    "outputSchema" : [
+      {
+        "isOptional" : "0",
+        "formattedType" : "String",
+        "type" : "String",
+        "name" : "label",
+        "shortDescription" : "Text label"
+      }
+    ],
+    "version" : "1.0",
+    "modelParameters" : [
+
+    ],
+    "author" : "Adwait Relekar",
+    "specificationVersion" : 3,
+    "stateSchema" : [
+
+    ],
+    "isUpdatable" : "0",
+    "availability" : {
+      "macOS" : "10.14",
+      "tvOS" : "12.0",
+      "visionOS" : "1.0",
+      "watchOS" : "5.0",
+      "iOS" : "12.0",
+      "macCatalyst" : "12.0"
+    },
+    "modelType" : {
+      "name" : "MLModelType_textClassifier"
+    },
+    "inputSchema" : [
+      {
+        "isOptional" : "0",
+        "formattedType" : "String",
+        "type" : "String",
+        "name" : "text",
+        "shortDescription" : "Input text"
+      }
+    ],
+    "classLabels" : [
+      "vegetable",
+      "fruit",
+      "pantry",
+      "spice",
+      "herb",
+      "dairy",
+      "protein",
+      "condiment"
+    ],
+    "generatedClassName" : "IngredientCategoryClassifier",
+    "userDefinedMetadata" : {
+
+    },
+    "method" : "predict"
+  }
+]

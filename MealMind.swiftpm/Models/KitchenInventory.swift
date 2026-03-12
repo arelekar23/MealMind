@@ -17,7 +17,6 @@ class KitchenItem {
     var count: Int
     var stockLevelRaw: String
     
-    // MARK: - Enum Accessors
     var category: IngredientCategory {
         get { IngredientCategory(rawValue: categoryRaw) ?? .other }
         set { categoryRaw = newValue.rawValue }
@@ -51,7 +50,6 @@ class KitchenItem {
     }
 }
 
-// MARK: - Stock Level
 enum StockLevel: String, Codable, CaseIterable {
     case full = "full"
     case low = "low"

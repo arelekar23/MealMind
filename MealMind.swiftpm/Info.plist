@@ -1,0 +1,4 @@
+{
+	"NSMicrophoneUsageDescription" = "This app uses the microphone to listen to your voice for adding items.";
+	"NSSpeechRecognitionUsageDescription" = "This app uses speech recognition to add items to your pantry by voice.";
+}

@@ -1,5 +1,5 @@
 //
-//  KitchenInventory.swift
+//  Recipe.swift
 //  MealMind
 //
 //  Created by Adwait Relekar on 2/9/26.
@@ -7,7 +7,6 @@
 
 import Foundation
 
-// MARK: - Recipe
 struct Recipe: Identifiable, Codable, Hashable {
     let id: UUID
     let name: String
@@ -17,19 +16,16 @@ struct Recipe: Identifiable, Codable, Hashable {
     let prepTime: Int
     let cookTime: Int
     let servings: Int
-    let calories: Int
     let tags: [String]
     let ingredients: [Ingredient]
     let steps: [String]
     let tips: String
-    let image: String
+    let image: String?
     
     var totalTime: Int { prepTime + cookTime }
-    
     var isQuick: Bool { totalTime <= 20 }
 }
 
-// MARK: - Ingredient
 struct Ingredient: Codable, Hashable {
     let name: String
     let quantity: Double
@@ -38,22 +34,22 @@ struct Ingredient: Codable, Hashable {
     let type: IngredientType
 }
 
-// MARK: - Meal Category
 enum MealCategory: String, Codable, CaseIterable, Hashable {
     case breakfast = "breakfast"
     case mainMeal = "main meal"
     case snack = "snack"
+    case dessert = "dessert"
     
     var displayName: String {
         switch self {
         case .breakfast: return "Breakfast"
         case .mainMeal: return "Main Meal"
         case .snack: return "Snack"
+        case .dessert: return "Dessert"
         }
     }
 }
 
-// MARK: - Difficulty
 enum Difficulty: String, Codable, CaseIterable, Hashable {
     case easy = "easy"
     case medium = "medium"
@@ -68,13 +64,11 @@ enum Difficulty: String, Codable, CaseIterable, Hashable {
     }
 }
 
-// MARK: - Ingredient Type
 enum IngredientType: String, Codable, Hashable {
     case countable = "countable"
     case bulk = "bulk"
 }
 
-// MARK: - Ingredient Category
 enum IngredientCategory: String, Codable, CaseIterable, Hashable {
     case vegetable = "vegetable"
     case fruit = "fruit"

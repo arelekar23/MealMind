@@ -7,14 +7,12 @@ struct ContentView: View {
                 RecipeListView()
             }
             
-            Tab("Weekly Plan", systemImage: "calendar") {
-                // TODO: WeeklyPlanView()
-                Text("Weekly Plan")
+            Tab("Meal Plan", systemImage: "calendar") {
+                MealPlanView()
             }
             
             Tab("Grocery", systemImage: "cart") {
-                // TODO: GroceryListView()
-                Text("Grocery List")
+                GroceryListView()
             }
             
             Tab("Pantry", systemImage: "refrigerator") {

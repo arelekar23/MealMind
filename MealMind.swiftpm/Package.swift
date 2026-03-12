@@ -10,7 +10,7 @@ import AppleProductTypes
 let package = Package(
     name: "MealMind",
     platforms: [
-        .iOS("18.0")
+        .iOS("26.0")
     ],
     products: [
         .iOSApplication(
@@ -20,8 +20,8 @@ let package = Package(
             teamIdentifier: "8WFJ8QVLC7",
             displayVersion: "1.0",
             bundleVersion: "1",
-            appIcon: .placeholder(icon: .tv),
-            accentColor: .presetColor(.brown),
+            appIcon: .asset("AppIcon"),
+            accentColor: .asset("AccentColor"),
             supportedDeviceFamilies: [
                 .pad,
                 .phone
@@ -31,7 +31,9 @@ let package = Package(
                 .landscapeRight,
                 .landscapeLeft,
                 .portraitUpsideDown(.when(deviceFamilies: [.pad]))
-            ]
+            ],
+            appCategory: "public.app-category.food-and-drink",
+            additionalInfoPlistContentFilePath: "Info.plist"
         )
     ],
     targets: [
@@ -47,5 +49,5 @@ let package = Package(
             ]
         )
     ],
-    swiftLanguageModes: [.v6]
+    swiftLanguageVersions: [.v5]
 )
